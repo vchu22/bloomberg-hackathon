@@ -1,36 +1,20 @@
 from typing import Union
-
+import json
 from fastapi import FastAPI
 
 app = FastAPI()
 
-dietary_needs = {
-    "5-8": {
-        "male": {
-            "calories": {
-                "max": 0,
-                "min": 0,
-            },
-            "protein": {
-                "max": 0,
-                "min": 0,
-            },
-        },
-        "female": {
-            "calories": {
-                "max": 0,
-                "min": 0,
-            },
-            "protein": {
-                "max": 0,
-                "min": 0,
-            },
-        },
-    }
-}
+with open('dietary_needs.json') as f:
+    dietary_needs = json.load(f)
 
 @app.get("/dietary_needs/{age}/{gender}")
 def nutrition_recommendation(age: int, gender: Union[str, None] = None):
-    return {"recommendation": {
-
-    }}
+    if (2 <= age <= 4):
+        age_range = "2-4"
+    elif (5 <= age <= 8):
+        age_range = "5-8"
+    elif (9 <= age <= 13):
+        age_range = "9-13"
+    elif (14 <= age <= 18):
+        age_range = "14-18"
+    return {"recommendation": dietary_needs[age_range][gender]}

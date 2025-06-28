@@ -1,0 +1,24 @@
+{
+    "5-8": {
+        "male": {
+            "calories": {
+                "max": 0,
+                "min": 0
+            },
+            "protein": {
+                "max": 0,
+                "min": 0
+            }
+        },
+        "female": {
+            "calories": {
+                "max": 0,
+                "min": 0
+            },
+            "protein": {
+                "max": 0,
+                "min": 0
+            }
+        }
+    }
+}
