@@ -17,4 +17,9 @@ def nutrition_recommendation(age: int, gender: Union[str, None] = None):
         age_range = "9-13"
     elif (14 <= age <= 18):
         age_range = "14-18"
-    return {"recommendation": dietary_needs[age_range][gender]}
+    else:
+        return {}
+    return {
+        "units": dietary_needs["units"],
+        "recommended_amounts": dietary_needs[age_range][gender]
+    }

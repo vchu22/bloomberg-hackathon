@@ -1,23 +1,224 @@
 {
-    "5-8": {
-        "male": {
-            "calories": {
-                "max": 0,
-                "min": 0
-            },
-            "protein": {
-                "max": 0,
-                "min": 0
-            }
-        },
+    "units": {
+        "protein": "ounces",
+        "fruits": "cups",
+        "vegetables": "cups",
+        "grains": "ounces",
+        "dairy": "cups"
+    },
+    "2-4": {
         "female": {
             "calories": {
-                "max": 0,
-                "min": 0
+                "min": 1000,
+                "max": 1400
             },
             "protein": {
-                "max": 0,
-                "min": 0
+                "min": 2,
+                "max": 4
+            },
+            "fruits": {
+                "min": 1,
+                "max": 1.5
+            },
+            "vegetables": {
+                "min": 1,
+                "max": 1.5
+            },
+            "grains": {
+                "min": 3,
+                "max": 5
+            },
+            "dairy": {
+                "min": 2,
+                "max": 2.5
+            }
+        },
+        "male": {
+            "calories": {
+                "min": 1000,
+                "max": 1600
+            },
+            "protein": {
+                "min": 2,
+                "max": 5
+            },
+            "fruits": {
+                "min": 1,
+                "max": 1.5
+            },
+            "vegetables": {
+                "min": 1,
+                "max": 2
+            },
+            "grains": {
+                "min": 3,
+                "max": 5
+            },
+            "dairy": {
+                "min": 2,
+                "max": 2.5
+            }
+        }
+    },
+    "5-8": {
+        "female": {
+            "calories": {
+                "min": 1200,
+                "max": 1800
+            },
+            "protein": {
+                "min": 3,
+                "max": 5
+            },
+            "fruits": {
+                "min": 1,
+                "max": 1.5
+            },
+            "vegetables": {
+                "min": 1.5,
+                "max": 2.5
+            },
+            "grains": {
+                "min": 4,
+                "max": 6
+            },
+            "dairy": {
+                "min": 2.5,
+                "max": 2.5
+            }
+        },
+        "male": {
+            "calories": {
+                "min": 1200,
+                "max": 2000
+            },
+            "protein": {
+                "min": 3,
+                "max": 5.5
+            },
+            "fruits": {
+                "min": 1,
+                "max": 2
+            },
+            "vegetables": {
+                "min": 1.5,
+                "max": 2.5
+            },
+            "grains": {
+                "min": 4,
+                "max": 6
+            },
+            "dairy": {
+                "min": 2.5,
+                "max": 2.5
+            }
+        }
+    },
+    "9-13": {
+        "female": {
+            "calories": {
+                "min": 1400,
+                "max": 2200
+            },
+            "protein": {
+                "min": 4,
+                "max": 6
+            },
+            "fruits": {
+                "min": 1.5,
+                "max": 2
+            },
+            "vegetables": {
+                "min": 1.5,
+                "max": 3
+            },
+            "grains": {
+                "min": 5,
+                "max": 7
+            },
+            "dairy": {
+                "min": 3,
+                "max": 3
+            }
+        },
+        "male": {
+            "calories": {
+                "min": 1600,
+                "max": 2600
+            },
+            "protein": {
+                "min": 5,
+                "max": 6.5
+            },
+            "fruits": {
+                "min": 1.5,
+                "max": 2
+            },
+            "vegetables": {
+                "min": 2,
+                "max": 3.5
+            },
+            "grains": {
+                "min": 5,
+                "max": 9
+            },
+            "dairy": {
+                "min": 3,
+                "max": 3
+            }
+        }
+    },
+    "14-18": {
+        "female": {
+            "calories": {
+                "min": 1800,
+                "max": 2400
+            },
+            "protein": {
+                "min": 5,
+                "max": 6.5
+            },
+            "fruits": {
+                "min": 1.5,
+                "max": 2
+            },
+            "vegetables": {
+                "min": 2.5,
+                "max": 3
+            },
+            "grains": {
+                "min": 6,
+                "max": 8
+            },
+            "dairy": {
+                "min": 3,
+                "max": 3
+            }
+        },
+        "male": {
+            "calories": {
+                "min": 2000,
+                "max": 3200
+            },
+            "protein": {
+                "min": 5.5,
+                "max": 7
+            },
+            "fruits": {
+                "min": 2,
+                "max": 2.5
+            },
+            "vegetables": {
+                "min": 2.5,
+                "max": 4
+            },
+            "grains": {
+                "min": 6,
+                "max": 10
+            },
+            "dairy": {
+                "min": 3,
+                "max": 3
             }
         }
     }
