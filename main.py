@@ -3,7 +3,7 @@ from typing import Union
 import json
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
-from data import df
+from data import meals_df
 import pandas as pd
 
 app = FastAPI()
@@ -48,4 +48,4 @@ def fetch_image(food: str):
 
 @app.get("/food_log")
 def fetch_food_log():
-    return df.to_dict(orient='records')
+    return meals_df.to_dict(orient='records')
