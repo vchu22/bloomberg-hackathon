@@ -6,11 +6,11 @@ from fastapi.responses import FileResponse
 
 app = FastAPI()
 
-with open('dietary_needs.json') as f:
+with open('data/dietary_needs.json') as f:
     dietary_needs = json.load(f)
 
 @app.get("/dietary_needs/{age}/{gender}")
-def dietary_needs(age: int, gender: Union[str, None] = None):
+def fetch_dietary_needs(age: int, gender: Union[str, None] = None):
     if (2 <= age <= 4):
         age_range = "2-4"
     elif (5 <= age <= 8):
