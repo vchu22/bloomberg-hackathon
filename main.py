@@ -10,7 +10,7 @@ with open('dietary_needs.json') as f:
     dietary_needs = json.load(f)
 
 @app.get("/dietary_needs/{age}/{gender}")
-def nutrition_recommendation(age: int, gender: Union[str, None] = None):
+def dietary_needs(age: int, gender: Union[str, None] = None):
     if (2 <= age <= 4):
         age_range = "2-4"
     elif (5 <= age <= 8):
@@ -27,7 +27,7 @@ def nutrition_recommendation(age: int, gender: Union[str, None] = None):
     }
 
 @app.get("/img/{food}")
-def nutrition_recommendation(food: str):
+def fetch_image(food: str):
     file_path = f"img/{food.lower()}.png"
     if os.path.isfile(file_path):
         return FileResponse(f"img/{food.lower()}.png", media_type="image/jpeg")
