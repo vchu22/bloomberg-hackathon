@@ -1,6 +1,8 @@
+import os
 from typing import Union
 import json
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 
 app = FastAPI()
 
@@ -23,3 +25,11 @@ def nutrition_recommendation(age: int, gender: Union[str, None] = None):
         "units": dietary_needs["units"],
         "recommended_amounts": dietary_needs[age_range][gender]
     }
+
+@app.get("/img/{food}")
+def nutrition_recommendation(food: str):
+    file_path = f"img/{food.lower()}.png"
+    if os.path.isfile(file_path):
+        return FileResponse(f"img/{food.lower()}.png", media_type="image/jpeg")
+    else:
+        raise HTTPException(status_code=404, detail="Image not found")
