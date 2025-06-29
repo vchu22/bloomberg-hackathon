@@ -4,11 +4,14 @@ import json
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from data import df
+import pandas as pd
 
 app = FastAPI()
 
 with open('data/dietary_needs.json') as f:
     dietary_needs = json.load(f)
+
+df = pd.read_csv("./data/recipes.csv")
 
 @app.get("/dietary_needs/{age}/{gender}")
 def fetch_dietary_needs(age: int, gender: Union[str, None] = None):
@@ -26,6 +29,14 @@ def fetch_dietary_needs(age: int, gender: Union[str, None] = None):
         "units": dietary_needs["units"],
         "recommended_amounts": dietary_needs[age_range][gender]
     }
+
+@app.get("/recipes/{search_term}")
+def fetch_recipes(search_term: str):
+    keyword = search_term.lower()
+    print(keyword)
+    matches = df[df["Dish Name"].str.lower().str.contains(keyword)]
+    return matches.to_dict(orient="records")
+
 
 @app.get("/img/{food}")
 def fetch_image(food: str):
