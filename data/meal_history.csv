@@ -1,4 +1,4 @@
-Date,Type of Meal,Dish Name ,Calories,Protein (oz),Fruits (cup),Vegetables (cup),Grains (oz),Dairy (cup),Link
+Date,TypeOfMeal,DishName,Calories,Protein,Fruits,Vegetables,Grains,Dairy,Link
 6/24/25,Breakfast,Milk ,149,0,0,0,0,1,
 6/24/25,Breakfast,Sweet potato hash with egg,300,2.5,0,1,0,0,https://www.myplate.gov/recipes/sweet-potato-hash-egg
 6/24/25,Lunch,chicken fried rice,340,1.5,0,0.25,2,0,https://www.myplate.gov/recipes/fried-rice
