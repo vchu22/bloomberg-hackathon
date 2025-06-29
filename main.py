@@ -3,6 +3,7 @@ from typing import Union
 import json
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
+from data import df
 
 app = FastAPI()
 
@@ -33,3 +34,7 @@ def fetch_image(food: str):
         return FileResponse(f"img/{food.lower()}.png", media_type="image/jpeg")
     else:
         raise HTTPException(status_code=404, detail="Image not found")
+
+@app.get("/food_log")
+def fetch_food_log():
+    return df
