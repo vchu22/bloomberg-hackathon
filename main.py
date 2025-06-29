@@ -37,4 +37,4 @@ def fetch_image(food: str):
 
 @app.get("/food_log")
 def fetch_food_log():
-    return df
+    return df.to_dict(orient='records')
