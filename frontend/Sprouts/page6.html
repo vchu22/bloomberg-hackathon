@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Recommendations</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="recipe-title">Recipe Recommendations</h1>
+    <p class="recipe-subtitle">Based on your nutrition goals</p>
+    
+    <div class="recipes-container" id="recipesContainer">
+      <!-- Loading state -->
+      <div class="loading-state" id="loadingState">
+        <div class="spinner"></div>
+        <p>Finding delicious recipes for you...</p>
+      </div>
+      
+      <!-- Recipes will be displayed here -->
+      <div class="recipes-grid" id="recipesGrid" style="display: none;">
+        <!-- Example recipe structure for your team's reference -->
+        <!-- 
+        <div class="recipe-card">
+          <div class="recipe-image">
+            <img src="recipe-image-url" alt="Recipe Name">
+          </div>
+          <div class="recipe-content">
+            <h3 class="recipe-name">Recipe Name</h3>
+            <p class="recipe-description">Recipe description here...</p>
+            <div class="recipe-nutrition">
+              <span class="nutrition-item">Calories: 350</span>
+              <span class="nutrition-item">Protein: 25g</span>
+            </div>
+            <button class="view-recipe-btn">View Recipe</button>
+          </div>
+        </div>
+        -->
+      </div>
+      
+      <!-- Error state -->
+      <div class="error-state" id="errorState" style="display: none;">
+        <p>Sorry, we couldn't load recipes right now. Please try again later.</p>
+        <button class="retry-btn" id="retryBtn">Try Again</button>
+      </div>
+    </div>
+    
+    <div class="nav-buttons">
+      <button id="backBtn">&#9664; Back to Plate</button>
+    </div>
+  </div>
+
+  <script src="page6.js"></script>
+</body>
+</html>

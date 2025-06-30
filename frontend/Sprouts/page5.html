@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition Plate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="calorieHeaderBar">
+  <div class="calorie-header-bar">
+    <div class="meal-tabs-container">
+      <div class="meal-tabs left-tabs">
+        <button class="meal-tab active" data-meal="breakfast">Breakfast</button>
+        <button class="meal-tab" data-meal="lunch">Lunch</button>
+      </div>
+
+      <div class="calorie-center">
+        <div class="calorie-number" id="calorieDisplay">----</div>
+        <div class="calorie-label">daily goal</div>
+      </div>
+
+      <div class="meal-tabs right-tabs">
+        <button class="meal-tab" data-meal="dinner">Dinner</button>
+        <button class="meal-tab" data-meal="snacks">Snacks</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="food-category-tabs">
+      <div class="food-tab fruits" data-category="fruits">
+        <span>Fruits</span>
+      </div>
+      <div class="food-tab veggies" data-category="veggies">
+        <span>Veggies</span>
+      </div>
+      <div class="food-tab protein" data-category="protein">
+        <span>Protein</span>
+      </div>
+      <div class="food-tab grains" data-category="grains">
+        <span>Grains</span>
+      </div>
+      <div class="food-tab dairy" data-category="dairy">
+        <span>Dairy</span>
+      </div>
+    </div>
+
+    <div class="drag-instruction">Click and Drag food items onto the plate</div>
+
+    
+
+    <div class="main-content-wrapper">
+      <div class="plate-and-tracking">
+        <div class="plate-section-wrapper">
+          <div class="plate-container">
+            <div class="plate-outer-circle">
+              <div class="plate-inner-circle">
+                <div class="plate-section fruits">
+                  <div class="section-label">Fruits</div>
+                  <div class="section-amount" id="fruitsAmount">-</div>
+                  <div class="section-unit">cups</div>
+                </div>
+                <div class="plate-section vegetables">
+                  <div class="section-label">Vegetables</div>
+                  <div class="section-amount" id="vegetablesAmount">-</div>
+                  <div class="section-unit">cups</div>
+                </div>
+                <div class="plate-section protein">
+                  <div class="section-label">Protein</div>
+                  <div class="section-amount" id="proteinAmount">-</div>
+                  <div class="section-unit">oz</div>
+                </div>
+                <div class="plate-section grains">
+                  <div class="section-label">Grains</div>
+                  <div class="section-amount" id="grainsAmount">-</div>
+                  <div class="section-unit">oz</div>
+                </div>
+              </div>
+              <div class="dairy-plate">
+                <div class="section-label">Dairy</div>
+                <div class="section-amount" id="dairyAmount">-</div>
+                <div class="section-unit">cups</div>
+              </div>
+            </div>
+          </div>
+          <div class="plate-controls">
+            <button id="saveMealBtn" class="save-meal-btn">Save Current Plate</button>
+            <button id="clearPlateBtn" class="clear-plate-btn">Clear Plate</button>
+          </div>
+        </div>
+
+        <div class="meal-tracking-panel">
+          <h3>Meal Tracker</h3>
+          <div class="tracking-table-container">
+            <table id="mealTrackingTable" class="meal-tracking-table">
+              <thead>
+                <tr>
+                  <th>Meal</th>
+                  <th>Foods Added</th>
+                  <th>Calories</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="mealTrackingBody">
+                <!-- Saved meals will appear here -->
+              </tbody>
+            </table>
+            <div id="noMealsMessage" class="no-meals-message">
+              No meals saved yet. Create a plate and click "Save Current Plate" to track your meals!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-button-container">
+      <button id="recipeBtn" class="recipe-button">Recipe Recommendations</button>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="backBtn">&#9664;</button>
+      <button id="nextBtn">&#9654;</button>
+    </div>
+  </div>
+
+  <script src="page5.js"></script>
+</body>
+</html>
