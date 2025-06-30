@@ -8,7 +8,8 @@
    cd bloomberg-hackathon
    pip install -r requirements.txt
    ```
-2. Run the server:
+2. Navigate to the backend folder and run the server:
    ```
+   cd backend
    fastapi dev main.py
    ```
