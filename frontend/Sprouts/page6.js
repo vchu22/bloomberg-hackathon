@@ -12,7 +12,7 @@ const backBtn = document.getElementById("backBtn");
 // 🔥 BACKEND TEAM: UPDATE THESE VALUES FOR YOUR PYTHON API
 const API_CONFIG = {
   // Replace with your Python Flask/FastAPI base URL
-  BASE_URL: 'http://your-python-backend.com/api',
+  BASE_URL: 'http://127.0.0.1:8000/',
   // Add authentication headers if needed
   HEADERS: {
     'Content-Type': 'application/json',
@@ -30,11 +30,11 @@ const userData = {
 };
 
 // DOM elements
-const loadingState = document.getElementById("loadingState");
-const recipesGrid = document.getElementById("recipesGrid");
-const errorState = document.getElementById("errorState");
-const retryBtn = document.getElementById("retryBtn");
-const backBtn = document.getElementById("backBtn");
+// const loadingState = document.getElementById("loadingState");
+// const recipesGrid = document.getElementById("recipesGrid");
+// const errorState = document.getElementById("errorState");
+// const retryBtn = document.getElementById("retryBtn");
+// const backBtn = document.getElementById("backBtn");
 
 // Function to fetch recipes from your API
 async function fetchRecipes() {
@@ -57,6 +57,8 @@ async function fetchRecipes() {
 
     const data = await response.json();
     displayRecipes(data.recipes || data); // Adjust based on your API response structure
+
+
 
 // ⭐⭐⭐ RECIPE API INTEGRATION TEMPLATE ⭐⭐⭐
 // 🔥 BACKEND TEAM: Implement these API endpoints in your Python backend

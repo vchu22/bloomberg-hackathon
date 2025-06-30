@@ -1267,6 +1267,7 @@ input[type="number"] {
   .food-category-tabs {
     max-width: 1000px;
     gap: 30px;
+    margin-top: 450px;
   }
 
   .food-items-container {
