@@ -11,7 +11,7 @@ app = FastAPI()
 with open('data/dietary_needs.json') as f:
     dietary_needs = json.load(f)
 
-df = pd.read_csv("./data/recipes.csv")
+df = pd.read_csv("data/recipes.csv")
 
 @app.get("/dietary_needs/{age}/{gender}")
 def fetch_dietary_needs(age: int, gender: Union[str, None] = None):
