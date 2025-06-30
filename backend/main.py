@@ -34,7 +34,7 @@ def fetch_dietary_needs(age: int, gender: Union[str, None] = None):
 def fetch_recipes(search_term: str):
     keyword = search_term.lower()
     print(keyword)
-    matches = df[df["Dish Name"].str.lower().str.contains(keyword)]
+    matches = df[df["DishName"].str.lower().str.contains(keyword)]
     return matches.to_dict(orient="records")
 
 
